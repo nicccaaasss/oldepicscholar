@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity</title>
+    <link rel="stylesheet" href="activity.css" />
+    <link rel="stylesheet" href="style.css" />
+      <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(45deg, #f3f4f6, #fff, #e2e8f0);
+    }
+    body.dark {
+      background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #1a1a1a);
+    }
+  </style>
+  </head>
+  <body>
+<body class="light">
+  <div class="sidebar">
+    <div class="logo-container">
+      <h2 class="logo">🎓 Epicscholar</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul class="nav">
+        <li><a href="index.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+          </div>
+        </a></li>
+        <li><a href="selfstudy.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">💬</span>
+            <span class="text">Messages</span>
+          </div>
+        </a></li>
+        <li><a href="messages.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">✏️</span>
+            <span class="text">Self-study</span>
+          </div>
+        </a></li>
+        <li><a href="bot.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🤖</span>
+            <span class="text">Edubot</span>
+          </div>
+        </a></li>
+        <li><a href="activity.html" class="nav-link active">
+          <div class="link-content">
+            <span class="icon">🏆</span>
+            <span class="text">Activity</span>
+          </div>
+        </a></li>
+        <li><a href="html.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🗓️</span>
+            <span class="text">Calendar</span>
+          </div>
+        </a></li>
+        <li><a href="profile.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">👤</span>
+            <span class="text">Profile</span>
+          </div>
+        </a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <input type="checkbox" id="toggle">
+      <label for="toggle" class="switch"></label>
+      <span class="theme-icons">☀️ 🌑</span>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="activities-container">
+      <div class="card-container top">
+        <div class="glass-card" onclick="location.href='chess.html'">
+          <button class="nig"><h1>Chess ♟️</h1></button>
+        </div>
+      </div>
+      <div class="card-container left">
+        <div class="glass-card" onclick="location.href='cricket.html'">
+          <button class="nig"><h1>Hand Cricket 🏏</h1></button>
+        </div>
+      </div>
+      <div class="card-container right">
+        <div class="glass-card" onclick="location.href='rockpaper.html'">
+          <button class="nig"><h1>Rock, Paper, Scissors ✂️</h1></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+    <script>
+      document.querySelectorAll('.glass-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          // More precise mouse position calculation
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          // Convert to percentage but constrain to card boundaries
+          const xPercent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+          const yPercent = Math.max(0, Math.min(100, (y / rect.height) * 100));
+          
+          card.style.setProperty('--mouse-x', `${xPercent}%`);
+          card.style.setProperty('--mouse-y', `${yPercent}%`);
+        });
+
+        // Reset gradient when mouse leaves
+        card.addEventListener('mouseleave', () => {
+          card.style.setProperty('--mouse-x', '50%');
+          card.style.setProperty('--mouse-y', '50%');
+        });
+      });
+    </script>
+  </body>
+</html>

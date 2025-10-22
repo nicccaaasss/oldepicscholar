@@ -1,0 +1,212 @@
+:root {
+    --bg-light: linear-gradient(145deg, #f5f7fa, #c3cfe2);
+    --bg-dark: linear-gradient(145deg, #1f1f1f, #3b3b3b);
+    --text-light: #222;
+    --text-dark: #eee;
+    --container-light: #ffffff;
+    --container-dark: #2c2c2c;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(255, 255, 255, 0.1);
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.5s ease;
+   height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+  body.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  .game-container {
+    background: var(--container-light);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 20px var(--shadow-light);
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+
+  body.dark-mode .game-container {
+    background: var(--container-dark);
+    box-shadow: 0 0 20px var(--shadow-dark);
+  }
+
+  .settings input {
+    width: 60px;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  button {
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    background-color: #666;
+  }
+
+  .score-board {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+    transition: all 0.5s ease;
+  }
+
+  .score-box {
+    background: var(--container-light);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px var(--shadow-light);
+    width: 45%;
+    perspective: 500px;
+    transition: all 0.5s ease;
+  }
+
+  body.dark-mode .score-box {
+    background: var(--container-dark);
+    box-shadow: 0 0 10px var(--shadow-dark);
+  }
+
+  .score-box p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-light);
+  }
+
+  body.dark-mode .score-box p {
+    color: var(--text-dark);
+  }
+
+  .score-number {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    transform-origin: bottom center;
+  }
+
+  .flip {
+    animation: flipAnim 0.6s ease;
+  }
+
+  @keyframes flipAnim {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0deg); }
+  }
+
+  .choices.hidden, .overlay-result.hidden { display: none; }
+
+  .overlay-result {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    padding: 1rem;
+    transition: all 0.5s ease;
+  }
+
+  .round-message {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 8px rgba(0,0,0,0.7);
+    margin-bottom: 1rem;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  .final-message {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    margin-bottom: 2rem;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .popper {
+    width: 15px;
+    height: 15px;
+    background-color: #ff4081;
+    border-radius: 50%;
+    position: absolute;
+    animation: fall 1.2s ease-out forwards;
+    opacity: 0.9;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(200px) scale(0.5); opacity: 0; }
+  }
+
+  .mode-toggle {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background: #bbb;
+    z-index: 101;
+  }
+  @keyframes jumpButton {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .jumping-button {
+    animation: jumpButton 1.5s ease-in-out infinite;
+  }
+  .exit{
+    background-color: black;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 19px;
+		}
+    .exit:hover {
+        background-color: #555;
+        transition: 0.3s;
+    }

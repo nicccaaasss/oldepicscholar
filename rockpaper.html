@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rockpaper.css" />
+</head>
+<body>
+  <button class="mode-toggle" onclick="toggleMode()">Switch Mode</button>
+  <div class="game-container">
+    <h1>Rock, Paper, Scissors</h1>
+    <div class="settings">
+      <label for="targetPoints">Points to Win:</label>
+      <input type="number" id="targetPoints" min="1" value="5" />
+      <button id="startGame">Start Game</button>
+    </div>
+
+    <div id="scoreBoard" class="score-board hidden">
+      <div class="score-box">
+        <p>You</p>
+        <div class="score-number" id="playerScore">0</div>
+      </div>
+      <div class="score-box">
+        <p>Computer</p>
+        <div class="score-number" id="computerScore">0</div>
+      </div>
+    </div>
+
+    <div class="choices hidden">
+      <button class="choice" data-choice="rock">✊</button>
+      <button class="choice" data-choice="paper">📄</button>
+      <button class="choice" data-choice="scissors">✂️</button>
+    </div>
+    <a href="activity.html" class="exit">Exit Game</a>
+  </div>
+
+  <div id="overlay" class="overlay-result hidden"></div>
+
+  <audio id="winSound" src="sounds/win.mp3" preload="auto"></audio>
+  <audio id="loseSound" src="sounds/lose.mp3" preload="auto"></audio>
+  <audio id="clickSound" src="sounds/click.mp3" preload="auto"></audio>
+  <audio id="gameOverSound" src="sounds/gameover.mp3" preload="auto"></audio>
+
+    <script src="rockpaper.js"></script>
+</body>
+</html>

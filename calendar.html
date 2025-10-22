@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📅 School Calendar</title>
+  <link rel="stylesheet" href="calendar.css" />
+  <link rel="stylesheet" href="style.css" />
+    <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(45deg, #f3f4f6, #fff, #e2e8f0);
+    }
+    body.dark {
+      background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #1a1a1a);
+    }
+  </style>
+</head>
+<body>
+<body class="light">
+  <div class="sidebar">
+    <div class="logo-container">
+      <h2 class="logo">🎓 Epicscholar</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul class="nav">
+        <li><a href="index.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+          </div>
+        </a></li>
+        <li><a href="messages.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">💬</span>
+            <span class="text">Messages</span>
+          </div>
+        </a></li>
+        <li><a href="selfstudy.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">✏️</span>
+            <span class="text">Self-study</span>
+          </div>
+        </a></li>
+        <li><a href="bot.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🤖</span>
+            <span class="text">Edubot</span>
+          </div>
+        </a></li>
+        <li><a href="activity.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🏆</span>
+            <span class="text">Activity</span>
+          </div>
+        </a></li>
+        <li><a href="html.html" class="nav-link active">
+          <div class="link-content">
+            <span class="icon">🗓️</span>
+            <span class="text">Calendar</span>
+          </div>
+        </a></li>
+        <li><a href="profile.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">👤</span>
+            <span class="text">Profile</span>
+          </div>
+        </a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <input type="checkbox" id="toggle">
+      <label for="toggle" class="switch"></label>
+    </div>
+  </div>
+
+  <div class="main">
+  </div>
+  
+    <div class="main">
+      <div class="container">
+        <h1>📅 My School Calendar</h1>
+    
+        <section class="card">
+          <h2>🗓️ Weekly Timetable</h2>
+          <form id="timetableForm" class="form-grid">
+            <select id="day">
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+            </select>
+            <input type="text" id="subject" placeholder="Subject" required />
+            <input type="time" id="startTime" required />
+            <input type="time" id="endTime" required />
+            <button type="submit">Add</button>
+          </form>
+          <div id="timetableDisplay" class="display-grid"></div>
+        </section>
+    
+        <section class="card">
+          <h2>📌 Exam & Event Planner</h2>
+          <form id="eventForm" class="form-grid">
+            <input type="text" id="eventTitle" placeholder="Event Title" required />
+            <input type="date" id="eventDate" required />
+            <input type="time" id="eventTime" required />
+            <textarea id="eventDesc" placeholder="Description"></textarea>
+            <button type="submit">Add Event</button>
+          </form>
+          <div id="eventDisplay" class="display-grid"></div>
+        </section>
+      </div>
+    
+    </div>
+  <script src="calendar.js"></script>
+</body>
+</html>

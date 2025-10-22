@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EpicProfile</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="maja.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-container">
+      <h2 class="logo">🎓 Epicscholar</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul class="nav">
+        <li><a href="index.html" class="nav-link active">
+          <div class="link-content">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+          </div>
+        </a></li>
+        <li><a href="messages.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">💬</span>
+            <span class="text">Messages</span>
+          </div>
+        </a></li>
+        <li><a href="selfstudy.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">✏️</span>
+            <span class="text">Self-study</span>
+          </div>
+        </a></li>
+        <li><a href="bot.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🤖</span>
+            <span class="text">Edubot</span>
+          </div>
+        </a></li>
+        <li><a href="activity.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🏆</span>
+            <span class="text">Activity</span>
+          </div>
+        </a></li>
+        <li><a href="html.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🗓️</span>
+            <span class="text">Calendar</span>
+          </div>
+        </a></li>
+        <li><a href="profile.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">👤</span>
+            <span class="text">Profile</span>
+          </div>
+        </a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <input type="checkbox" id="toggle">
+      <label for="toggle" class="switch"></label>
+      <span class="theme-icons">☀️ 🌑</span>
+    </div>
+  </div>
+  <div class="main">
+  <div class="epic-profile">
+    <div class="profile-header">
+      <img src="IMG_6790.jpeg" class="avatar" >
+      <div class="profile-info">
+        <h1>Krrithanu Hari</h1>
+        <p class="tagline">💡 Building cool things | 🚀 Dream big</p>
+        <div class="stats">
+          <div><strong>108</strong><span>Posts</span></div>
+          <div><strong>2.1K</strong><span>Followers</span></div>
+          <div><strong>150</strong><span>Following</span></div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="bio">
+      <p><strong>Hi! 👋</strong> I'm a creator, coder, and dreamer. Let’s connect!</p>
+      <p>📍 Based in india</p>
+      <div class="badges">
+        <span>💻 Coder</span>
+        <span>📸 Creator</span>
+        <span>🎓 Student</span>
+      </div>
+    </div>
+
+    <div class="upload-buttons">
+      <label class="upload-label">
+        📷 Add Photo
+        <input type="file" accept="image/*" id="photoInput" hidden>
+      </label>
+      <label class="upload-label">
+        🎥 Add Video
+        <input type="file" accept="video/*" id="videoInput" hidden>
+      </label>
+    </div>
+
+    <hr>
+
+    <div class="gallery" id="gallery">
+      <!-- Media gets added here -->
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+<script src="maja.js"></script>
+</body>
+</html>

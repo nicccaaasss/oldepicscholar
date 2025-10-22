@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand Cricket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Material+Icons&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cricket.css">
+</head>
+<body>
+  <div class="theme-switch-wrapper">
+    <span class="material-icons theme-icon">light_mode</span>
+    <label class="theme-switch">
+      <input type="checkbox" onchange="toggleTheme()" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+    <span class="material-icons theme-icon">dark_mode</span>
+  </div>
+  
+  <div class="game-section visible" id="setup-section">
+    <div class="setup-card">
+      <h1>🏏 Hand Cricket</h1>
+      <div class="range-container">
+        <label>Maximum number per turn</label>
+        <div class="number-limit-options">
+          <button class="number-option selected" onclick="selectNumberLimit(6)">0-6</button>
+          <button class="number-option" onclick="selectNumberLimit(10)">0-10</button>
+        </div>
+      </div>
+      <div class="range-container">
+        <label for="wicket-limit">Wickets per innings</label>
+        <input type="range" id="wicket-limit" min="1" max="10" value="3" />
+        <div class="range-value" id="wicket-value">3</div>
+      </div>
+      <button class="btn" onclick="startGame()">
+        Start 
+        <span class="material-icons">Hand Cricket</span>
+      </button>
+      <button class="exit"  onclick="location.href='activity.html'">
+        Exit
+      </button>
+    </div>
+  </div>
+
+  <div class="game-section" id="toss-section">
+    <div class="card">
+      <h2>Toss Time! 🪙</h2>
+      <div class="toss-controls">
+        <div class="number-grid" id="toss-numbers"></div>
+        <div class="select-container">
+          <select class="select-choice" id="player-choice">
+            <option value="odd">Odd Total</option>
+            <option value="even">Even Total</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn" onclick="doToss()">Toss Coin</button>
+    </div>
+  </div>
+
+  <div class="game-section" id="game-section">
+    <div class="scoreboard">
+      <div class="score-card">
+        <h3>Your Score</h3>
+        <div class="score-number" id="player-score">0</div>
+        <div class="wickets">
+          Your Wickets: <span id="player-wickets">0</span>/<span id="player-max-wickets">0</span>
+        </div>
+      </div>
+      <div class="score-card">
+        <h3>Bot Score</h3>
+        <div class="score-number" id="bot-score">0</div>
+        <div class="wickets">
+          Bot Wickets: <span id="bot-wickets">0</span>/<span id="bot-max-wickets">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-controls">
+      <h3 id="game-status">Choose your number</h3>
+      <div class="number-grid" id="number-grid"></div>
+    </div>
+
+    <div id="play-result" class="result-message"></div>
+  </div>
+
+  <div class="toss-overlay" id="toss-overlay">
+    <div class="toss-result-card">
+      <h2>Toss Result</h2>
+      <div id="toss-numbers-display"></div>
+      <div id="toss-winner-display"></div>
+    </div>
+  </div>
+
+  <div id="celebration" class="celebration"></div>
+  
+  <audio id="sound-run" src="sounds/run.mp3" preload="none"></audio>
+  <audio id="sound-out" src="sounds/out.mp3" preload="none"></audio>
+  <audio id="sound-win" src="sounds/win.mp3" preload="none"></audio>
+
+  <script src="cricket.js"></script>
+</body>
+</html>

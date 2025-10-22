@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Chess Game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="chess.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #f3f4f6, #fff, #e2e8f0);
+        }
+        body.dark {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #1a1a1a);
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="chess-nav-sidebar">
+        <div class="sidebar">
+            <div class="logo-container">
+                <h2 class="logo">🎓 Epicscholar</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul class="nav">
+                    <li><a href="index.html" class="nav-link">
+                        <div class="link-content">
+                            <span class="icon">🏠</span>
+                            <span class="text">Home</span>
+                        </div>
+                    </a></li>
+                    <li><a href="#" class="nav-link">
+                        <div class="link-content">
+                            <span class="icon">💬</span>
+                            <span class="text">Messages</span>
+                        </div>
+                    </a></li>
+                    <li><a href="#" class="nav-link">
+                        <div class="link-content">
+                            <span class="icon">✏️</span>
+                            <span class="text">Self-study</span>
+                        </div>
+                    </a></li>
+                    <li><a href="bot.html" class="nav-link">
+                        <div class="link-content">
+                            <span class="icon">🤖</span>
+                            <span class="text">Edubot</span>
+                        </div>
+                    </a></li>
+                    <li><a href="activity.html" class="nav-link active">
+                        <div class="link-content">
+                            <span class="icon">🏆</span>
+                            <span class="text">Activity</span>
+                        </div>
+                    </a></li>
+                    <li><a href="html.html" class="nav-link">
+                        <div class="link-content">
+                            <span class="icon">🗓️</span>
+                            <span class="text">Calendar</span>
+                        </div>
+                    </a></li>
+                    <li><a href="#" class="nav-link">
+                        <div class="link-content">
+                            <span class="icon">👤</span>
+                            <span class="text">Profile</span>
+                        </div>
+                    </a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="switch"></label>
+                <span class="theme-icons">☀️ 🌑</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="chess-game-container">
+        <div id="start-screen">
+            <h1>Modern Chess Game</h1>
+            <div class="game-mode-container">
+              <div class="start-option" id="player-vs-player">
+                <i class="fas fa-user-friends"></i>
+                <span>Player vs Player</span>
+              </div>
+              <div class="start-option" id="player-vs-ai">
+                <i class="fas fa-robot"></i>
+                <span>Player vs AI</span>
+              </div>
+              <div class="start-option" id="ai-vs-ai">
+                <i class="fas fa-microchip"></i>
+                <span>AI vs AI</span>
+              </div>
+            </div>
+            
+            <div class="timer-container">
+              <h3>Game Time</h3>
+              <div class="timer-options">
+                <div class="timer-preset" data-minutes="5">5 min</div>
+                <div class="timer-preset" data-minutes="10">10 min</div>
+                <div class="timer-preset" data-minutes="15">15 min</div>
+                <div class="timer-preset" data-minutes="30">30 min</div>
+                <div class="timer-preset" data-minutes="60">1 hour</div>
+                <div class="timer-preset" id="unlimited-timer">∞</div>
+              </div>
+            </div>
+            
+            <button id="start-button" disabled>Start Game</button>
+          </div>
+  
+          <div class="game-container" style="display: none;">
+            <!-- Black Sidebar (left) -->
+            <aside class="sidebar black">
+              <div class="player-info">
+                <h3 style="color:#fff;text-align:center;">Black</h3>
+                <div class="captured-pieces"></div>
+              </div>
+              <div class="timer black-timer"></div>
+              <div class="move-history left-history"></div>
+            </aside>
+  
+            <!-- Chessboard Center -->
+            <main>
+              <div class="controls">
+                <button class="btn" id="undo-btn"><i class="fas fa-undo"></i></button>
+                <button class="btn" id="flip-btn"><i class="fas fa-retweet"></i></button>
+                <button class="btn" id="theme-btn"><i class="fas fa-moon"></i></button>
+              </div>
+              <div id="chess-board"></div>
+              <div id="thinking" class="thinking" style="display:none">
+                <i class="fas fa-cog fa-spin"></i>
+                <span>AI is thinking<span class="thinking-dots"></span></span>
+              </div>
+            </main>
+  
+            <!-- White Sidebar (right) -->
+            <aside class="sidebar white">
+              <div class="player-info">
+                <h3 style="color:#fff;text-align:center;">White</h3>
+                <div class="captured-pieces"></div>
+              </div>
+              <div class="timer white-timer"></div>
+              <div class="move-history"></div>
+            </aside>
+          </div>
+    </div>
+  <script src="chess.js">
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

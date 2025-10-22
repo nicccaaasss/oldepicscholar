@@ -1,0 +1,100 @@
+
+:root {
+  --primary: #4f46e5;
+  --background: #f0f4f8;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --accent: #e0e7ff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--text-color);
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+input, select, textarea, button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #3b36c6;
+}
+
+.display-grid {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.class, .event {
+  background: var(--accent);
+  border-left: 4px solid var(--primary);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.timetable-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: red;
+  padding-left: 10px;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EpicProfile</title>
+  <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(45deg, #f3f4f6, #fff, #e2e8f0);
+    }
+    body.dark {
+      background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #1a1a1a);
+    }
+  </style>
+</head>
+<body class="light">
+  <div class="sidebar">
+    <div class="logo-container">
+      <h2 class="logo">🎓 Epicscholar</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul class="nav">
+        <li><a href="index.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+          </div>
+        </a></li>
+        <li><a href="messages.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">💬</span>
+            <span class="text">Messages</span>
+          </div>
+        </a></li>
+        <li><a href="selfstudy.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">✏️</span>
+            <span class="text">Self-study</span>
+          </div>
+        </a></li>
+        <li><a href="bot.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🤖</span>
+            <span class="text">Edubot</span>
+          </div>
+        </a></li>
+        <li><a href="activity.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🏆</span>
+            <span class="text">Activity</span>
+          </div>
+        </a></li>
+        <li><a href="html.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🗓️</span>
+            <span class="text">Calendar</span>
+          </div>
+        </a></li>
+        <li><a href="profile.html" class="nav-link active">
+          <div class="link-content">
+            <span class="icon">👤</span>
+            <span class="text">Profile</span>
+          </div>
+        </a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <input type="checkbox" id="toggle">
+      <label for="toggle" class="switch"></label>
+      <span class="theme-icons">☀️ 🌑</span>
+    </div>
+  </div>
+
+    <div class="main">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar-container">
+                    <div class="profile-avatar">
+                        <img id="profile-image" src="IMG_6578.JPG" alt="Profile">
+                    </div>
+                    <label for="photo-upload" class="photo-upload-btn">
+                        <i class="fas fa-camera"></i>
+                        Change Photo
+                    </label>
+                    <input type="file" id="photo-upload" accept="image/*" hidden>
+                </div>
+                
+                <div class="profile-info">
+                    <div class="profile-name-section">
+                        <h1>Krrithanu Hari</h1>
+                        <span class="student-id">Roll No: 21</span>
+                        <span class="class-section">Class VIII-A</span>
+                    </div>
+                    
+                    <div class="academic-stats">
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Overall</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Attendance</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2nd</span>
+                            <span class="stat-label">Rank</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-bio">
+                        <p>🏎️ Passionate Car Enthusiast | Future Automotive Engineer</p>
+                        <p>🚗 Loves JDM & F1 | Scale Model Collector</p>
+                        <p>📚 Science & Math Enthusiast</p>
+                    </div>
+
+                    <div class="interests-tags">
+                        <span class="tag">#Porsche</span>
+                        <span class="tag">#F1</span>
+                        <span class="tag">#Nissan_GTR</span>
+                        <span class="tag">#JDM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="academic-highlights">
+                <div class="subject-grades">
+                    <h3>Term 1 Performance</h3>
+                    <div class="grades-grid">
+                        <div class="subject-card">
+                            <div class="subject-icon">📐</div>
+                            <h4>Mathematics</h4>
+                            <span class="grade">98/100</span>
+                            <div class="grade-bar"></div>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subject-icon">🧪</div>
+                            <h4>Science</h4>
+                            <span class="grade">95/100</span>
+                            <div class="grade-bar"></div>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subject-icon">📚</div>
+                            <h4>English</h4>
+                            <span class="grade">92/100</span>
+                            <div class="grade-bar"></div>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subject-icon">🗺️</div>
+                            <h4>Social Science</h4>
+                            <span class="grade">94/100</span>
+                            <div class="grade-bar"></div>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subject-icon">🗣️</div>
+                            <h4>Hindi</h4>
+                            <span class="grade">90/100</span>
+                            <div class="grade-bar"></div>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subject-icon">📖</div>
+                            <h4>Telugu</h4>
+                            <span class="grade">93/100</span>
+                            <div class="grade-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="content-tabs">
+                <button class="tab-btn active" data-tab="academics">
+                    <i class="fas fa-book"></i> Studies
+                </button>
+                <button class="tab-btn" data-tab="cars">
+                    <i class="fas fa-car"></i> Cars
+                </button>
+                <button class="tab-btn" data-tab="activities">
+                    <i class="fas fa-trophy"></i> Achievements
+                </button>
+                <button class="tab-btn" data-tab="gallery">
+                    <i class="fas fa-images"></i> Gallery
+                </button>
+            </div>
+        </div>
+    </div>
+
+  <div class="edit-modal" id="editModal">
+    <div class="modal-content">
+        <h2>Edit Profile</h2>
+        <form id="profile-edit-form">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="edit-name" placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label>Bio Lines</label>
+                <input type="text" id="edit-bio-1" placeholder="Bio line 1">
+                <input type="text" id="edit-bio-2" placeholder="Bio line 2">
+                <input type="text" id="edit-bio-3" placeholder="Bio line 3">
+            </div>
+            <div class="form-group">
+                <label>Interests (comma-separated)</label>
+                <input type="text" id="edit-interests" placeholder="#cars, #F1, #JDM">
+            </div>
+            <div class="button-group">
+                <button type="submit" class="save-btn">Save Changes</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

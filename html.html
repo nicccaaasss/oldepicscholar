@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Calendar</title>
+  <link rel="stylesheet" href="html.css" />
+    <link rel="stylesheet" href="style.css" />
+      <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(45deg, #f3f4f6, #fff, #e2e8f0);
+    }
+    body.dark {
+      background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #1a1a1a);
+    }
+  </style>
+</head>
+<body>
+<body class="light">
+  <div class="sidebar">
+    <div class="logo-container">
+      <h2 class="logo">🎓 Epicscholar</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul class="nav">
+        <li><a href="index.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+          </div>
+        </a></li>
+        <li><a href="messages.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">💬</span>
+            <span class="text">Messages</span>
+          </div>
+        </a></li>
+        <li><a href="selfstudy.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">✏️</span>
+            <span class="text">Self-study</span>
+          </div>
+        </a></li>
+        <li><a href="bot.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🤖</span>
+            <span class="text">Edubot</span>
+          </div>
+        </a></li>
+        <li><a href="activity.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">🏆</span>
+            <span class="text">Activity</span>
+          </div>
+        </a></li>
+        <li><a href="html.html" class="nav-link active">
+          <div class="link-content">
+            <span class="icon">🗓️</span>
+            <span class="text">Calendar</span>
+          </div>
+        </a></li>
+        <li><a href="profile.html" class="nav-link">
+          <div class="link-content">
+            <span class="icon">👤</span>
+            <span class="text">Profile</span>
+          </div>
+        </a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <input type="checkbox" id="toggle">
+      <label for="toggle" class="switch"></label>
+      <span class="theme-icons">☀️ 🌑</span>
+    </div>
+  </div>
+      
+        <div class="main">
+    <div class="calendar-section">
+        <div class="calendar-container">
+            <div class="header">
+                <div class="calendar-nav">
+                    <button id="prevBtn" class="nav-btn">❮</button>
+                    <h1 id="monthYear"></h1>
+                    <button id="nextBtn" class="nav-btn">❯</button>
+                </div>
+                <p id="currentDate"></p>
+            </div>
+            <div class="calendar">
+                <div class="day-names">
+                    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+                    <div>Thu</div><div>Fri</div><div>Sat</div>
+                </div>
+                <div id="days" class="days-grid"></div>
+            </div>
+            <div class="btnfornig">
+                <button class="eventdate" onclick="location.href='calendar.html'">
+                    Time table & Event Planner
+                </button>
+            </div>
+        </div>
+        <div class="events-container">
+            <div class="events-header">
+                <h2>Events</h2>
+                <p id="selectedDate"></p>
+            </div>
+            <div id="eventsList" class="events-list">
+                <!-- Events will be displayed here -->
+            </div>
+        </div>
+    </div>
+</div>
+  <script src="html.js"></script>
+</body>
+</html>
